@@ -38,7 +38,7 @@ export default function Folder({ folders, audios }) {
         {audios.map(audio => (
           <li key={audio.id}>
             <span>{audio.name}</span>
-            <audio controls src={`/api/stream/${audio.id}`} />
+            <audio controls preload="auto" src={`/api/stream/${audio.id}`} />
           </li>
         ))}
       </ul>
